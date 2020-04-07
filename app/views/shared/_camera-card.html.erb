@@ -1,0 +1,8 @@
+<div class="camera-card">
+  <% if camera.photo.attached? %>
+      <%= cl_image_tag(camera.photo.key, height:"100%", width:"100%", class:"camera-img") %>
+  <% end %>
+  <h4><%= camera.title %></h4>
+  <p><b><%= camera.price_per_day %></b> / day</p>
+  <p><%= camera.address %></p>
+</div>

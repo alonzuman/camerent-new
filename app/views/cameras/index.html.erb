@@ -1,1 +1,11 @@
-<h1>hi ofek</h1>
+<div class="container">
+  <ul class="grid-container">
+    <% @cameras.each do |camera| %>
+      <li>
+        <%= link_to camera_path(camera) do %>
+          <%= render "shared/camera-card", camera: camera %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

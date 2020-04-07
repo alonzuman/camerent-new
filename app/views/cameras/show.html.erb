@@ -1,0 +1,21 @@
+
+<%= link_to "Edit", edit_camera_path(@camera)%>
+<% if @camera.photo.attached? %>
+  <%= cl_image_tag(@camera.photo.key, height:"100%", width:"100%") %>
+<% end %>
+
+<div class="container">
+  <div class="camera-header">
+    <div class="title-and-adress">
+      <h1><%= @camera.title %></h1>
+      <p><%= @camera.address %></p>
+    </div>
+    <div class="camera-avatar">
+      <% if @camera.user.photo.attached? %>
+        <%= cl_image_tag(@camera.user.photo.key, class:"medium-avatar") %>
+      <% end %>
+      <h6><%= @camera.user.email %></h6>
+    </div>
+  </div>
+  <p><%= @camera.price_per_day %></p>
+</div>

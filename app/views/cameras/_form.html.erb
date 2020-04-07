@@ -1,0 +1,10 @@
+<%= simple_form_for(@camera) do |f| %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :title %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :price_per_day %>
+  <%= f.input :extras %>
+  <%= f.submit "Add Camera" %>
+<% end %>
