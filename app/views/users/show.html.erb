@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="user-info">
+    <%= cl_image_tag(@user.photo.key, class:"avatar") %>
+    <h4><%= @user.email %></h4>
+  </div>
+
+
+  <h2><%= @user.email %> cameras</h2>
+  <ul class="grid-container">
+    <% @user.cameras.each do |camera| %>
+      <%= link_to camera_path(camera) do %>
+        <%= render "shared/camera-card", camera: camera %>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

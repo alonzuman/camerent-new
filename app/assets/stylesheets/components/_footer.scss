@@ -1,0 +1,21 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 40px;
+  border-top: 1px solid #00000015;
+}
+
+.price-conteiner {
+  margin-top: 5px;
+  display: flex;
+
+  p {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+  }
+}

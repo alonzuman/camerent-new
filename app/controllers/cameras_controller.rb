@@ -13,18 +13,18 @@ class CamerasController < ApplicationController
     @camera = Camera.new
   end
 
+  def create
+    @camera = Camera.new(camera_params)
+    @camera.user = current_user
+    @camera.save ? (redirect_to root_path) : (render :new)
+  end
+
   def edit
     @camera = Camera.find(params[:id])
   end
 
   def update
     @camera.update(camera_params) ? (redirect_to camera_path(@camera)) : (render :new)
-  end
-
-  def create
-    @camera = Camera.new(camera_params)
-    @camera.user = current_user
-    @camera.save ? (redirect_to root_path) : (render :new)
   end
 
   private 

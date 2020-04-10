@@ -1,5 +1,8 @@
 .camera-img {
   border-radius: 4px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -9,4 +12,17 @@ a {
 a:hover {
   color: $dark;
   text-decoration: none;
+}
+
+.title-and-avatar {
+  display: flex;
+  justify-content: space-between;
+
+  .avatar {
+    height: 40px;
+    margin-top: -50px;
+    margin-right: 10px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px #00000033;
+  }
 }

@@ -6,3 +6,19 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .grid-container {
+    grid-template-columns: 1fr ;
+  }
+
+  .camera-img {
+    height: 300px;
+  }
+}
