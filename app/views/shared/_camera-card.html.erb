@@ -4,7 +4,9 @@
   <% end %>
   <div class="title-and-avatar">
     <h4><%= camera.title %></h4>
-    <%= cl_image_tag(camera.user.photo.key, class:"avatar") %>
+    <% if camera.user.photo.attached? %>
+      <%= cl_image_tag(camera.user.photo.key, class:"avatar") %>
+    <% end %>
   </div>
   <p><b><%= camera.price_per_day %></b> / day</p>
   <p><%= camera.address %></p>
