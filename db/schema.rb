@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_152118) do
+ActiveRecord::Schema.define(version: 2020_04_11_104450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,16 @@ ActiveRecord::Schema.define(version: 2020_04_10_152118) do
     t.index ["user_id"], name: "index_cameras_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "camera_id"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["camera_id"], name: "index_reviews_on_camera_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -69,6 +79,7 @@ ActiveRecord::Schema.define(version: 2020_04_10_152118) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "full_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -77,4 +88,6 @@ ActiveRecord::Schema.define(version: 2020_04_10_152118) do
   add_foreign_key "bookings", "cameras"
   add_foreign_key "bookings", "users"
   add_foreign_key "cameras", "users"
+  add_foreign_key "reviews", "cameras"
+  add_foreign_key "reviews", "users"
 end

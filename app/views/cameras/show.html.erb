@@ -1,6 +1,8 @@
 <%= link_to "Edit", edit_camera_path(@camera)%>
 <% if @camera.photo.attached? %>
   <%= cl_image_tag(@camera.photo.key, class:"show-page-photo") %>
+  <% else %>
+        <%= image_tag("no-image.png", class:"show-page-photo")%>
 <% end %>
 
 <div class="container">
@@ -12,10 +14,17 @@
     <div class="camera-avatar">
       <% if @camera.user.photo.attached? %>
         <%= cl_image_tag(@camera.user.photo.key, class:"medium-avatar") %>
+        <% else %>
+        <%= image_tag("default-avatar.png", class:"medium-avatar")%>
       <% end %>
-      <h6><%= @camera.user.email %></h6>
+      <h6><%= @camera.user.full_name %></h6>
     </div>
   </div>
+
+  
+<%= link_to "review", new_camera_review_path(@camera)%>
+
+
 </div>
 
 <%= render "shared/footer", camera: @camera %>
