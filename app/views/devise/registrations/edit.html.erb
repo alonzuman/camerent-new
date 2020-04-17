@@ -1,3 +1,5 @@
+<%= render  "shared/mobile-navbar", left: (link_to '', :back, class:"fas fa-chevron-left"), right: '' %>
+
 <div class="container">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -38,4 +40,3 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 </div>
-<%= render "shared/action-bar"%>

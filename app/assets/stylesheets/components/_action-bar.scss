@@ -6,14 +6,21 @@
 	padding: 10px 20px;
 	justify-content: space-around;
   display: none;
+  border-bottom: 1px solid #00000010;
   
   p {
     font-size: 9px;
+    // color: $light-gray;
+  }
+
+  .far {
+    font-size: 22px;
+    // color: $light-gray;
   }
 }
 
 .link-action-bar { 
-	text-align: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

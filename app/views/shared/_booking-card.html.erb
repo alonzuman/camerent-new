@@ -4,6 +4,9 @@
 <% end %>
   
   <h5>Camera: <%= booking.camera.title %></h5>
+  <% if booking.camera.user.photo.attached? %>
+    <%= cl_image_tag(booking.camera.user.photo.key, class:"avatar")%>
+  <% end %>
   <p>Camera owner: <%= booking.camera.user.full_name %></p>
   <p>Start date: <%= booking.start_date %></p>
   <p>End date: <%= booking.end_date %></p>

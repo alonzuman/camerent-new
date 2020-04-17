@@ -47,19 +47,21 @@ h1 {
 }
 
 h2 {
-
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 h3 {
-  
+  font-size: 14px;
 }
 
 h4 {
-  
+  margin-top: 40px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 p {
@@ -67,11 +69,22 @@ p {
   margin-bottom: 6px;
 }
 
+.btn-primary {
+  min-width: 200px;
+  border-radius: 50px;
+}
+
+.secondary-button {
+  border: 1px solid $blue;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
 .hero-image {
-  padding: 300px 120px;
+  padding: 42.5vh 20vh;
   text-align: center;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,6 +99,10 @@ p {
 
 .far {
   font-size: 22px;
+}
+
+#index-content {
+  margin-top: 60px;
 }
 
 @media only screen and (max-width: 768px) {

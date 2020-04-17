@@ -1,3 +1,7 @@
+<%= render  "shared/mobile-navbar",
+  left: (link_to '', :back, class:"fas fa-chevron-left"),
+  right: '' %>
+
 <%= link_to "Back", :back %>
 <%= link_to "Edit", edit_camera_path(@camera)%>
 
@@ -9,7 +13,7 @@
 <% end %>
 </div> 
 
-<div class="container">
+<div class="container" id="index-content">
   <div class="camera-header">
     <div class="title-and-adress">
       <h1><%= @camera.title %></h1>
