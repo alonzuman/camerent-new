@@ -17,10 +17,11 @@ a:hover {
 .title-and-avatar {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 
   .avatar {
     height: 40px;
-    margin-top: -50px;
+    margin-top: -60px;
     margin-right: 10px;
     border: 1px solid white;
     box-shadow: 1px 1px 10px #00000033;
