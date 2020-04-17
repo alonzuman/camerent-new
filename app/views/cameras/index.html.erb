@@ -1,4 +1,13 @@
+<div class="hero-banner-container">
+  <div class="hero-image">
+    <h1>Discover awesome photography gear and dope people around you!</h1>
+    <br>
+    <%= link_to "Discover", '#view-cameras', class:"btn btn-primary"%>
+  </div>
+</div>
+
 <div class="container">
+  <h3 id="view-cameras">Cameras</h3>
   <ul class="grid-container">
     <% @cameras.each do |camera| %>
       <li>

@@ -10,6 +10,12 @@
 .show-page-photo {
   height: 80vh;
   max-height: 400px;
+  max-width: 500px;
   width: 100%;
   object-fit: cover;
+}
+
+.show-page-photo-container {
+  text-align: center;
+  background-color: $dark-gray;
 }

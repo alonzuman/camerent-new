@@ -5,7 +5,11 @@
 	width: 100%;
 	padding: 10px 20px;
 	justify-content: space-around;
-	display: none;
+  display: none;
+  
+  p {
+    font-size: 9px;
+  }
 }
 
 .link-action-bar { 
