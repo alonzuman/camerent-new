@@ -5,13 +5,13 @@
     <%= image_tag("no-image.png", class:"camera-img") %>
   <% end %>
   <div class="title-and-avatar">
-    <h4><%= camera.title %></h4>
+    <h5><%= camera.title %></h5>
     <% if camera.user.photo.attached? %>
       <%= cl_image_tag(camera.user.photo.key, class:"avatar") %>
        <%  else %>
     <%= image_tag("default-avatar.png", class:"avatar") %>
     <% end %>
   </div>
-  <p><b><%= camera.price_per_day %></b> / day</p>
   <p><%= camera.address %></p>
+  <p>$<b><%= camera.price_per_day %></b> / day</p>
 </div>
