@@ -2,5 +2,6 @@ class DashboardController < ApplicationController
   def index
     @bookings_by_me = Booking.find_by(user_id: current_user.id)
     @my_cameras = Camera.where(user: current_user)
+  raise
   end
 end

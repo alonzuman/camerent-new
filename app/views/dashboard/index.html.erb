@@ -1,1 +1,10 @@
-<h1>hi im the user dashboard</h1>
+
+<div class="container">
+  <%= link_to "Back", :back %>
+  <h1>Dashboard </h1>
+  <ul>
+    <% @bookings_by_me.each do |bookings| %>
+      <li><%= @bookings %></li>
+    <% end %>
+  </ul>
+</div>
