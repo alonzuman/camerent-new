@@ -3,6 +3,18 @@
 <br>
 <br>
 
+<div class="user-info">
+<% if current_user.photo.attached? %>
+  <%= cl_image_tag(current_user.photo.key, class:"big-avatar")%>
+<% end %>
+
+<h3>Hi, <%= current_user.full_name %></h3>
+<br>
+</div>
+
+
+<h4>Bookings I made</h4>
+
 <% if @bookings_by_me.nil? %>
   <h1>you have no bookings yet</h1>
 <% else %>
@@ -18,6 +30,7 @@
 <% if @my_cameras.nil? %>
   <h1>you have no cameras yet</h1>
 <% else %>
+<h4>Cameras I posted</h4>
   <% @my_cameras.each do |camera| %>
     <%# TODO edit camera card %>
     <%= camera.title %>

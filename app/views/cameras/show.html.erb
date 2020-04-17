@@ -1,3 +1,4 @@
+<%= link_to "Back", :back %>
 <%= link_to "Edit", edit_camera_path(@camera)%>
 <% if @camera.photo.attached? %>
   <%= cl_image_tag(@camera.photo.key, class:"show-page-photo") %>
