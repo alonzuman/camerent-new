@@ -12,29 +12,27 @@
 <br>
 </div>
 
-
 <h4>Bookings I made</h4>
 
 <% if @bookings_by_me.nil? %>
   <h1>you have no bookings yet</h1>
 <% else %>
-<%# TODO edit bookings card %>
-  <% @bookings_by_me.each do |booking|%>
-    <h5>Camera: <%= booking.camera.title %></h5>
-    <p>Camera owner: <%= booking.user.full_name %></p>
-    <p>Start date: <%= booking.start_date %></p>
-    <p>End date: <%= booking.end_date %></p>
-  <% end %>
+  <div class="grid-container">
+    <% @bookings_by_me.each do |booking|%>
+      <%= render "shared/booking-card", booking: booking %>
+    <% end %>
+  </div>
 <% end %>
 
 <% if @my_cameras.nil? %>
   <h1>you have no cameras yet</h1>
 <% else %>
 <h4>Cameras I posted</h4>
-  <% @my_cameras.each do |camera| %>
-    <%# TODO edit camera card %>
-    <%= camera.title %>
-  <% end %>
+  <div class="grid-container">
+    <% @my_cameras.each do |camera| %>
+      <%= render  "shared/camera-card", camera: camera %>
+    <% end %>
+  </div>
 <% end %>
 </div>
 
