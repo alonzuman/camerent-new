@@ -39,3 +39,20 @@ a:hover {
     margin-left: 10px;
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  .camera-img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .camera-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -105,10 +105,12 @@ p {
   margin-top: 60px;
 }
 
+
+
 @media only screen and (max-width: 768px) {
   .hero-image {
     padding: 160px 40px;
-    max-height: 400px;
+    max-height: 400px;    
 
     h1 {
       font-size: 26px;
