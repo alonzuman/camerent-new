@@ -1,0 +1,28 @@
+<div class="container">
+<%= link_to "Edit profile", edit_user_registration_path%>
+<br>
+<br>
+
+<% if @bookings_by_me.nil? %>
+  <h1>you have no bookings yet</h1>
+<% else %>
+<%# TODO edit bookings card %>
+  <% @bookings_by_me.each do |booking|%>
+    <h5>Camera: <%= booking.camera.title %></h5>
+    <p>Camera owner: <%= booking.user.full_name %></p>
+    <p>Start date: <%= booking.start_date %></p>
+    <p>End date: <%= booking.end_date %></p>
+  <% end %>
+<% end %>
+
+<% if @my_cameras.nil? %>
+  <h1>you have no cameras yet</h1>
+<% else %>
+  <% @my_cameras.each do |camera| %>
+    <%# TODO edit camera card %>
+    <%= camera.title %>
+  <% end %>
+<% end %>
+</div>
+
+<%= render  "shared/action-bar" %>
