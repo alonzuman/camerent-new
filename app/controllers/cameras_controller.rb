@@ -2,7 +2,7 @@ class CamerasController < ApplicationController
   before_action :set_camera, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cameras = Camera.all
+    @cameras = policy_scope(Camera).order(created_at: :desc)
   end
 
   def show
@@ -24,6 +24,7 @@ class CamerasController < ApplicationController
   end
 
   def update
+    record.user == user
     @camera.update(camera_params) ? (redirect_to camera_path(@camera)) : (render :new)
   end
 

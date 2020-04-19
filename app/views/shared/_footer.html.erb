@@ -3,6 +3,10 @@
     <h4><b><%= camera.price_per_day %>$</b></h4><p>per day</p>
   </div>
   <div class="button-container">
+  <% if user_signed_in? %>
     <%= link_to "Book", new_camera_booking_path(camera), class:"btn btn-primary" %>
+  <% else %>
+    <%= link_to "Book", new_user_session_path, class:"btn btn-primary" %>
+  <% end %>
   </div>
 </div>
