@@ -26,7 +26,7 @@
     <div class="camera-avatar">
       <% if @camera.user.photo.attached? %>
         <%= cl_image_tag(@camera.user.photo.key, class:"medium-avatar") %>
-        <% else %>
+      <% else %>
         <%= image_tag("default-avatar.png", class:"medium-avatar")%>
       <% end %>
       <h6><%= @camera.user.full_name %></h6>
