@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :show]
   end  
   resources :reviews, only: [:destroy]
+<<<<<<< Updated upstream
+=======
+  get '/dashboard', to: 'dashboard#main'
+>>>>>>> Stashed changes
 end
