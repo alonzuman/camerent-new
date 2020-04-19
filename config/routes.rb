@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :show]
   end  
   resources :reviews, only: [:destroy]
-  get '/dashboard', to: 'dashboard#index'
+
+
+  get '/dashboard', to: 'dashboard#main'
+
 end

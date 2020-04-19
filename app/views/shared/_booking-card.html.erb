@@ -1,5 +1,6 @@
 <div class="booking-card">
-<% if (!booking.camera.photo.key.nil?) %>
+<% if (booking.camera.photo.attached?) %>
+
   <%= cl_image_tag(booking.camera.photo.key, class:"booking-card-image") %>
 <% end %>
   
@@ -7,7 +8,12 @@
   <% if booking.camera.user.photo.attached? %>
     <%= cl_image_tag(booking.camera.user.photo.key, class:"avatar")%>
   <% end %>
+  <%if !booking.camera.user.full_name == current_user.full_name%>
   <p>Camera owner: <%= booking.camera.user.full_name %></p>
+  <%else%>
+  <p>Booked by <%= booking.user.full_name %></p>
+  <%end%>
+
   <p>Start date: <%= booking.start_date %></p>
   <p>End date: <%= booking.end_date %></p>
 </div>
