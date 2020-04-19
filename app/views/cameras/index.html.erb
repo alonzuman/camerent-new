@@ -1,4 +1,15 @@
-<div class="container">
+<%= render  "shared/mobile-navbar", left: '', right: '' %>
+
+<div class="hero-banner-container">
+  <div class="hero-image">
+    <h1>Discover awesome photography gear and dope people around you</h1>
+    <br>
+    <%= link_to "Discover", '#view-cameras', class:"btn btn-primary"%>
+  </div>
+</div>
+
+<div class="container" id="index-content">
+  <h2 id="view-cameras">Discover photography gear around you</h2>
   <ul class="grid-container">
     <% @cameras.each do |camera| %>
       <li>
@@ -9,3 +20,4 @@
     <% end %>
   </ul>
 </div>
+<%= render "shared/action-bar"%>

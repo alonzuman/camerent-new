@@ -29,6 +29,92 @@ li {
 }
 
 .container {
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 100px;
 }
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  margin-top: 40px;
+}
+
+h5 {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.btn-primary {
+  min-width: 200px;
+  border-radius: 50px;
+}
+
+.secondary-button {
+  border: 1px solid $blue;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.hero-image {
+  padding: 42.5vh 20vh;
+  text-align: center;
+  width: 100%;
+  height: 95vh;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero-banner.jpg");
+  
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 10px #00000015;
+  }
+}
+
+.far {
+  font-size: 22px;
+}
+
+#index-content {
+  margin-top: 60px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .hero-image {
+    padding: 160px 40px;
+    max-height: 400px;    
+
+    h1 {
+      font-size: 26px;
+    }
+  }
+}
+

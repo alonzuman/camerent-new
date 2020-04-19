@@ -1,5 +1,6 @@
 <div class="booking-card">
 <% if (booking.camera.photo.attached?) %>
+
   <%= cl_image_tag(booking.camera.photo.key, class:"booking-card-image") %>
 <% end %>
   

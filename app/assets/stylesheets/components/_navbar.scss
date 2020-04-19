@@ -1,6 +1,12 @@
 .navbar-container {
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid #00000015;
+  position: fixed;
+  top: 0;
+  width:100%;
 }
 
 .navbar-menu {
