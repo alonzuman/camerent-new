@@ -23,7 +23,15 @@
   <% end %>
 
   <h4>Bookings I received</h4>
-  <h4>//TODO</h4>
+  <% if @bookings_i_recieved.nil? %>
+    <h3>you have no bookings yet</h3>
+  <% else %>
+    <div class="grid-container">
+      <% @bookings_i_recieved.each do |booking|%>
+        <%= render "shared/booking-card", booking: booking %>
+      <% end %>
+    </div>
+  <% end %>
 
   <% if @my_cameras.nil? %>
     <h3>you have no cameras yet</h3>
@@ -40,4 +48,3 @@
 </div>
 
 <%= render  "shared/action-bar" %>
-

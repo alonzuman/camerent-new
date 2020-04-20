@@ -8,17 +8,14 @@
     <ul class="navbar-menu">
     <% if user_signed_in? %>
       <li class="navbar-item">
-        <%= link_to "Add camera", new_camera_path, class: "nav-link" %>
+        <p><%= link_to "Add camera", new_camera_path, class: "nav-link mt-1" %></p>
       </li>
       <li class="navbar-item">
-        <%= link_to "Settings", edit_user_registration_path, class: "nav-link" %>
-      </li>
-      <li class="navbar-item">
-        <%= link_to "Log out", destroy_user_session_path, method: :delete,  class: "nav-link" %>
+        <p><%= link_to "My profile", dashboard_path, class: "nav-link mt-1" %></p>
       </li>
     <% else %>
     <li class="navbar-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      <p><%= link_to "Login", new_user_session_path, class: "nav-link mt-1" %></p>
     </li>
     <% end %>
     </ul>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :cameras do
     resources :bookings, only: [:new, :create]
     resources :reviews, only: [:new, :create, :show]
-  end  
+  end
   resources :reviews, only: [:destroy]
-  get '/dashboard', to: 'dashboard#index'
+  get '/dashboard', to: 'dashboard#main'
 end

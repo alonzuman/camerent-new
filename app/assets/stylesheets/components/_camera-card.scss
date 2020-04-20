@@ -1,5 +1,14 @@
+.camera-card {
+  background-color: white;
+  box-shadow: 1px 1px 10px #00000005;
+  padding-bottom: 10px;
+
+  p {
+    margin-left: 10px;
+  }
+}
+
 .camera-img {
-  border-radius: 4px;
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -20,9 +29,30 @@ a:hover {
 
   .avatar {
     height: 40px;
-    margin-top: -50px;
+    margin-top: -60px;
     margin-right: 10px;
     border: 1px solid white;
     box-shadow: 1px 1px 10px #00000033;
+  }
+
+  h5 {
+    margin-left: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .camera-img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .camera-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
   }
 }

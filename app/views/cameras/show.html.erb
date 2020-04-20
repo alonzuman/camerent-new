@@ -1,20 +1,32 @@
+<%= render  "shared/mobile-navbar",
+  left: (link_to '', :back, class:"fas fa-chevron-left"),
+  right: '' %>
+
+<%= link_to "Back", :back %>
 <%= link_to "Edit", edit_camera_path(@camera)%>
+
+<div class="show-page-photo-container">
 <% if @camera.photo.attached? %>
   <%= cl_image_tag(@camera.photo.key, class:"show-page-photo") %>
   <% else %>
         <%= image_tag("no-image.png", class:"show-page-photo")%>
 <% end %>
+</div> 
 
-<div class="container">
+<div class="container" id="index-content">
   <div class="camera-header">
     <div class="title-and-adress">
       <h1><%= @camera.title %></h1>
       <p><%= @camera.address %></p>
+      <h3>Description</h3>
+      <p><%= @camera.description %></p>
+      <h3>Extra equipment</h3>
+      <p><%= @camera.extras %></p>
     </div>
     <div class="camera-avatar">
       <% if @camera.user.photo.attached? %>
         <%= cl_image_tag(@camera.user.photo.key, class:"medium-avatar") %>
-        <% else %>
+      <% else %>
         <%= image_tag("default-avatar.png", class:"medium-avatar")%>
       <% end %>
       <h6><%= @camera.user.full_name %></h6>
@@ -22,7 +34,7 @@
   </div>
 
   
-<%= link_to "review", new_camera_review_path(@camera)%>
+<%# <%= link_to "review", new_camera_review_path(@camera)%>
 
 
 </div>
