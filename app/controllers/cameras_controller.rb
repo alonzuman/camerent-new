@@ -7,6 +7,7 @@ class CamerasController < ApplicationController
 
   def show
     @camera = Camera.find(params[:id])
+    @review = Review.new
   end
 
   def new
@@ -28,7 +29,7 @@ class CamerasController < ApplicationController
     @camera.update(camera_params) ? (redirect_to camera_path(@camera)) : (render :new)
   end
 
-  private 
+  private
 
   def camera_params
     params.require(:camera).permit(:title, :description, :address, :price_per_day, :category, :extras, :rating, :photo)

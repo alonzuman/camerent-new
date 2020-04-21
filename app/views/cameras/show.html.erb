@@ -38,7 +38,7 @@
   </h2>
 
   <div id="reviews">
-    <% if @restaurant.reviews.blank? %>
+    <% if @camera.reviews.blank? %>
       Be the first to leave a review for <%= @camera.title %>
     <% else %>
       <% @camera.reviews.each do |review| %>
@@ -46,6 +46,8 @@
       <% end %>
     <% end %>
   </div>
+
+  <%= render 'reviews/form', camera: @camera, review: @review %>
   <!-- Reviews -->
 
 <%# <%= link_to "review", new_camera_review_path(@camera)%>
