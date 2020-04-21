@@ -11,6 +11,7 @@
       <% unless current_user.bio.nil? %>
         <h2><%= current_user.bio%></h2>
       <%end%>
+    <%= link_to "Settings", edit_user_registration_path, class:"btn secondary-button", style: "max-width: 300px", id:"wide-screen-element" %>
   </div>
 
   <h4>Bookings I made</h4>
@@ -20,7 +21,9 @@
   <% else %>
     <div class="grid-container">
       <% @bookings_by_me.each do |booking|%>
-        <%= render "shared/booking-card", booking: booking %>
+        <%= link_to camera_path(booking.camera) do %>
+          <%= render "shared/booking-card", booking: booking %>
+        <% end %>
       <% end %>
     </div>
   <% end %>
@@ -31,7 +34,9 @@
   <% else %>
     <div class="grid-container">
       <% @bookings_i_recieved.each do |booking|%>
-        <%= render "shared/booking-card", booking: booking %>
+        <%= link_to camera_path(booking.camera) do %>
+          <%= render "shared/booking-card", booking: booking %>
+        <% end %>
       <% end %>
     </div>
   <% end %>
