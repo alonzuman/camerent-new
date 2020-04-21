@@ -1,4 +1,5 @@
 class CamerasController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_camera, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -6,27 +7,33 @@ class CamerasController < ApplicationController
   end
 
   def show
-    @camera = Camera.find(params[:id])
+    authorize @camera
   end
 
   def new
     @camera = Camera.new
+    authorize @camera
   end
 
   def create
     @camera = Camera.new(camera_params)
+    authorize @camera
     @camera.user = current_user
     @camera.save ? (redirect_to root_path) : (render :new)
   end
 
   def edit
     @camera = Camera.find(params[:id])
-    # Todo
+    # TODO
   end
 
   def update
     record.user == user
     @camera.update(camera_params) ? (redirect_to camera_path(@camera)) : (render :new)
+  end
+
+  def delete
+    # TODO
   end
 
   private 

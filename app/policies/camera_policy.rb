@@ -3,15 +3,21 @@ class CameraPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def new?
-    end
+  def show?
+    true
+  end
 
-    def create?
-    end
-    
-    def destroy?
-      record.user == user
-    end
+  def create?
+    true
+  end
+
+  def update?
+    record.user == user
+  end
+
+  def destroy?
+    record.user == user
   end
 end

@@ -33,6 +33,14 @@ li {
   margin-bottom: 100px;
 }
 
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  
+  h2 {
+    text-align: center;
+  }
+}
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -57,6 +65,7 @@ h3 {
 
 h4 {
   margin-top: 40px;
+  font-size: 16px;
 }
 
 h5 {
@@ -71,13 +80,22 @@ p {
 
 .btn-primary {
   min-width: 200px;
+  width: 100%;
   border-radius: 50px;
+  border: 1px solid $blue;
 }
 
 .secondary-button {
+  min-width: 200px;
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 10px;
   border: 1px solid $blue;
-  border-radius: 4px;
-  padding: 8px 16px;
+  color: $blue;
+}
+
+.secondary-button:hover {
+  color: $blue;
 }
 
 .hero-image {
@@ -115,6 +133,10 @@ p {
     h1 {
       font-size: 26px;
     }
+  }
+
+  #wide-screen-element {
+    display: none;
   }
 }
 
