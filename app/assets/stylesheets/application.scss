@@ -37,7 +37,7 @@ li {
   max-width: 700px;
   margin: 0 auto;
   
-  h2 {
+  h1 {
     text-align: center;
   }
 }
@@ -144,3 +144,23 @@ p {
   }
 }
 
+.form-actions {
+  text-align: center;
+}
+
+// Playing around with the forms
+
+.form-control {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $gray;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $blue;
+}
