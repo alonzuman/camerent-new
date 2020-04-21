@@ -21,6 +21,7 @@ class CamerasController < ApplicationController
 
   def edit
     @camera = Camera.find(params[:id])
+    # Todo
   end
 
   def update
