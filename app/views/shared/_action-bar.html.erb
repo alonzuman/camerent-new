@@ -1,6 +1,17 @@
 <div class="action-bar-container">
 	<%if !user_signed_in?%>
-		<h2>hi there</h2>
+		<div class="link-action-bar">
+      <%= link_to cameras_path  do %>
+        <i class="far fa-compass"></i>
+        <p>Explore</p>
+      <% end %>
+		</div>
+    <div class="link-action-bar">
+      <%= link_to new_user_session_path  do %>
+        <i class="far fa-user-circle"></i>
+			  <p>Profile</p>
+      <% end %>
+		</div>
 	<% else%>
 	<div class="link-action-bar">
 		<%= link_to cameras_path  do %>
