@@ -7,7 +7,10 @@
     <% else %>
       <%= image_tag  "default-avatar", class:"big-avatar" %>
     <% end %>
+        <%raise%>
+
     <h2>Hi, <%= current_user.full_name %></h2>
+    <%raise%>
   </div>
 
   <h4>Bookings I made</h4>
