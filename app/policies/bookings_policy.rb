@@ -5,9 +5,5 @@ class BookingsPolicy < ApplicationPolicy
     end
   end
 
-  def new?
-  end
-
-  def create?
-  end
+  # WRONG NAME NEED TO DELETE
 end

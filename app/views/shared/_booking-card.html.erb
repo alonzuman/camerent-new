@@ -1,9 +1,9 @@
 <div class="booking-card">
-
-<% if (booking.camera.photo.attached?) %>
-
-  <%= cl_image_tag(booking.camera.photo.key, class:"booking-card-image") %>
-<% end %>
+  <% if booking.camera.photo.attached? %>
+    <%= cl_image_tag(booking.camera.photo.key, class:"booking-card-image") %>
+  <% else %>
+    <%= image_tag('no-image.png', class:"booking-card-image")%>
+  <% end %>
   <div class="title-and-avatar">
     <h5>Camera: <%= booking.camera.title %></h5>
     <% if booking.camera.user.photo.attached? %>
