@@ -11,7 +11,7 @@
   <% else %>
         <%= image_tag("no-image.png", class:"show-page-photo")%>
 <% end %>
-</div> 
+</div>
 
 <div class="container" id="index-content">
   <div class="camera-header">
@@ -32,8 +32,22 @@
       <h6><%= @camera.user.full_name %></h6>
     </div>
   </div>
+  <!-- Reviews -->
+  <h2>
+    <%= pluralize @camera.reviews.size, "review" %>
+  </h2>
 
-  
+  <div id="reviews">
+    <% if @restaurant.reviews.blank? %>
+      Be the first to leave a review for <%= @camera.title %>
+    <% else %>
+      <% @camera.reviews.each do |review| %>
+        <%= render 'reviews/show', review: review %>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- Reviews -->
+
 <%# <%= link_to "review", new_camera_review_path(@camera)%>
 
 
