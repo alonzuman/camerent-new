@@ -3,5 +3,9 @@ class CameraPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+
+    def destroy?
+      record.user == user
+    end
   end
 end
