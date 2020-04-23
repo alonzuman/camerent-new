@@ -1,4 +1,4 @@
 <%= simple_form_for([ camera, review ]) do |f| %>
   <%= f.input :content, as: :text %>
-  <%= f.button :submit %>
+  <%= f.submit "Add a review", class: "btn btn-primary"%>
 <% end %>
