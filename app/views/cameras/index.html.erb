@@ -1,23 +1,29 @@
 <%= render  "shared/mobile-navbar", left: '', right: '' %>
 
-<div class="hero-banner-container">
-  <div class="hero-image">
-    <h1>Discover awesome photography gear and dope people around you</h1>
-    <br>
-    <%= link_to "Discover", '#view-cameras', class:"btn btn-primary"%>
+<div class="results-container">
+  <div id="map-element" class="map-container" style="margin-top: 60px;">
+    <div
+      id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   </div>
+
+  <div class="results-wrapper">
+    <h2 id="view-cameras">More than <%= (@cameras.size - 2) %> cameras around you</h2>
+    <ul class="grid-container">
+      <% @cameras.each do |camera| %>
+        <li>
+          <%= link_to camera_path(camera) do %>
+            <%= render "shared/camera-card", camera: camera %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+    </div>
 </div>
 
-<div class="container" id="index-content">
-  <h2 id="view-cameras">Discover photography gear around you</h2>
-  <ul class="grid-container">
-    <% @cameras.each do |camera| %>
-      <li>
-        <%= link_to camera_path(camera) do %>
-          <%= render "shared/camera-card", camera: camera %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+<div class="toggle-map-button">
+  <%= link_to "Open Map", "#", class:"toggle-map"%>
 </div>
 <%= render "shared/action-bar"%>
