@@ -44,6 +44,9 @@
 
   #map {
     width: 0%;
+    height: 100vh;
+    max-width: 768px;
+    right: 0;
   }
 
   .map-button {

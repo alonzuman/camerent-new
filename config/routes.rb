@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end  
   resources :reviews, only: [:destroy]
 
+
   get '/dashboard', to: 'dashboard#main'
 
 end
