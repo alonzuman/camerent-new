@@ -8,7 +8,7 @@ a = Camera.create(
   rating: rand(1..5),
   address: 'Alexander Yannai 4, Tel Aviv',
   extras: 'Carry bag',
-  user: User.first
+  user: User.last
 )
 
 a = Camera.create(
@@ -19,7 +19,7 @@ a = Camera.create(
   rating: rand(1..5),
   address: '59 Ben Yehuda, Tel Aviv',
   extras: 'Carry bag',
-  user: User.first
+  user: User.last
 )
 
 a = Camera.create(
@@ -30,7 +30,7 @@ a = Camera.create(
   rating: rand(1..5),
   address: '59 Ben Yehuda, Tel Aviv',
   extras: 'Carry bag',
-  user: User.first
+  user: User.last
 )
 
 a = Camera.create(
@@ -41,7 +41,7 @@ a = Camera.create(
   rating: rand(1..5),
   address: '59 Ben Yehuda, Tel Aviv',
   extras: 'Carry bag',
-  user: User.first
+  user: User.last
 )
 
 

@@ -12,15 +12,6 @@
   padding: 20px;
 }
 
-.toggle-map-button {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 90px;
-}
-
 #map {
   width: 30%;
   height: 100vh;
@@ -43,14 +34,7 @@
   }
 
   #map {
-    width: 0%;
-    height: 100vh;
-    max-width: 768px;
-    right: 0;
-  }
-
-  .map-button {
-    display: block;
+    display: none;
   }
 
   .toggle-map {
