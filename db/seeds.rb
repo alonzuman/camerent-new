@@ -17,7 +17,7 @@ a = Camera.create(
   description: 'This ravishing retro option squeezes in plenty of high-end tech',
   price_per_day: rand(80..150),
   rating: rand(1..5),
-  address: 'Alexander Yannai 4, Tel Aviv',
+  address: '59 Ben Yehuda, Tel Aviv',
   extras: 'Carry bag',
   user: User.first
 )
@@ -28,7 +28,7 @@ a = Camera.create(
   description: 'Quality results partnered with speedy operation',
   price_per_day: rand(80..150),
   rating: rand(1..5),
-  address: 'Alexander Yannai 4, Tel Aviv',
+  address: '59 Ben Yehuda, Tel Aviv',
   extras: 'Carry bag',
   user: User.first
 )
@@ -39,7 +39,7 @@ a = Camera.create(
   description: 'Resolution, speed and traditional controls - this DSLR still delivers',
   price_per_day: rand(80..150),
   rating: rand(1..5),
-  address: 'Alexander Yannai 4, Tel Aviv',
+  address: '59 Ben Yehuda, Tel Aviv',
   extras: 'Carry bag',
   user: User.first
 )

@@ -4,6 +4,12 @@ class CamerasController < ApplicationController
 
   def index
     @cameras = policy_scope(Camera).order(created_at: :desc)
+    @markers = @cameras.map do |camera|
+      {
+        lat: camera.latitude,
+        lng: camera.longitude
+      }
+    end
   end
 
   def show

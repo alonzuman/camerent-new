@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.6.5'
 
 gem 'faker'
-
+gem 'geocoder'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'

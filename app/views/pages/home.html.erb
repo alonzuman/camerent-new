@@ -1,2 +1,23 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render  "shared/mobile-navbar", left: '', right: '' %>
+
+<div class="hero-banner-container">
+  <div class="hero-image">
+    <h1>Discover awesome photography gear and dope people around you</h1>
+    <br>
+    <%= link_to "Discover", cameras_path, class:"btn btn-primary"%>
+  </div>
+</div>
+
+<div class="container" id="index-content">
+  <h2 id="view-cameras">Discover photography gear around you</h2>
+  <ul class="grid-container">
+    <% @cameras.each do |camera| %>
+      <li>
+        <%= link_to camera_path(camera) do %>
+          <%= render "shared/camera-card", camera: camera %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<%= render "shared/action-bar"%>
