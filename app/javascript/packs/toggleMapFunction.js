@@ -18,6 +18,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
       map.style.opacity = '0';
       map.style.zIndex = '-10';
       cardsGrid.style.display = 'block';
+      cardsGrid.style.display = '99';
       mapToggleButton.innerText = 'Open Map';
     }
   })
