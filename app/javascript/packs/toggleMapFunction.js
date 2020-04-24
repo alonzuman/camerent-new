@@ -21,6 +21,4 @@ if (window.matchMedia("(max-width: 768px)").matches) {
       mapToggleButton.innerText = 'Open Map';
     }
   })
-}
-
-window.innerWidth = 455
+};
