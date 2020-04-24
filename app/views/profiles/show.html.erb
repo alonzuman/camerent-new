@@ -1,7 +1,13 @@
 <div class="container">
   <div class="user-info">
-    <%= cl_image_tag(@user.photo.key, class:"avatar") %>
+    <% if @user.photo.attached? %>
+        <%= cl_image_tag(@user.photo.key, class:"medium-avatar") %>
+      <% else %>
+        <%= image_tag("default-avatar.png", class:"medium-avatar")%>
+    <% end %>
     <h4><%= @user.email %></h4>
+
+
   </div>
 
 
@@ -14,3 +20,5 @@
     <% end %>
   </ul>
 </div>
+
+<!-- ink_to "View Profile", @user.profile -->
