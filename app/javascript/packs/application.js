@@ -3,9 +3,6 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 
 import { initMapbox } from './init_mapbox';
 
-<<<<<<< Updated upstream
-initMapbox();
-=======
 initMapbox();
 
 // Toggle display and hide of map on click 
@@ -22,4 +19,3 @@ mapToggleButton.addEventListener('click', () => {
     mapToggleButton.innerText = 'Open Map'
   }
 })
->>>>>>> Stashed changes
