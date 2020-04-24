@@ -1,7 +1,7 @@
 <%= render  "shared/mobile-navbar", left: '', right: '' %>
 
 <div class="results-container">
-  <div id="map-element" class="map-container" style="margin-top: 60px;">
+  <div id="map-element" class="map-container">
     <div
       id="map"
       data-markers="<%= @markers.to_json %>"
@@ -28,3 +28,4 @@
 </div>
 
 <%= render "shared/action-bar"%>
+<%= javascript_pack_tag 'toggleMapFunction' %>
