@@ -9,7 +9,7 @@
     <% end %>
     <h2>Hi, <%= current_user.full_name %></h2>
       <% unless current_user.bio.nil? %>
-        <h2><%= current_user.bio%></h2>
+        <p><%= current_user.bio%></p>
       <% end %>
     <%= link_to "Settings", edit_user_registration_path, class:"btn secondary-button", style: "max-width: 300px", id:"wide-screen-element" %>
   </div>

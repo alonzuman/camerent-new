@@ -23,9 +23,19 @@
   display: none;
 }
 
+
+
 @media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr 1fr ;
+  }
+
+  .toggle-map-button {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
   }
 
   .results-wrapper {
@@ -34,7 +44,9 @@
   }
 
   #map {
-    display: none;
+    position: fixed;
+    right: 0;
+    width: 0%;
   }
 
   .toggle-map {

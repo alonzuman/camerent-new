@@ -3,6 +3,29 @@
   justify-content: space-between;
 }
 
+.top-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  position: absolute;
+  padding: 0 20px;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 17px;
+  background-color: white;
+}
+
+.circle:hover {
+  box-shadow: 2px 2px 5px #00000035;
+  background-color: #f4f4f4;
+}
+
 .camera-avatar {
   text-align: center;
 }
@@ -24,5 +47,11 @@
 .title-and-adress {
   h1 {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .top-buttons {
+    display: none
   }
 }
