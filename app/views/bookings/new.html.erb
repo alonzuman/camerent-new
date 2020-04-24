@@ -1,9 +1,14 @@
+<%= link_to "", :back, class:"circle fas fa-times", id:"exit-button" %>
 <div class="container">
-  <%= link_to "Back", :back %>
-  <h2>Book <%= @camera.title %></h2>
-  <%= simple_form_for([@camera, @booking]) do |f| %>
-    <%= f.input :start_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %> 
-    <%= f.input :end_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %> 
-    <%= f.submit "Book", class:"btn btn-primary" %>
-  <% end %>
+  <div class="form-container">
+    <br>
+    <h1>Book <%= @camera.title %></h1>
+    <%= simple_form_for([@camera, @booking]) do |f| %>
+      <%= f.input :start_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %> 
+      <%= f.input :end_date, as: :string, input_html: { class: "datepicker", value: Time.now.strftime('%d-%m-%Y') } %> 
+      <div class="form-actions">
+        <%= f.submit "Book", class:"btn btn-primary"  %>
+      </div>
+    <% end %>
+  </div>
 </div>

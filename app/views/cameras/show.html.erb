@@ -1,9 +1,13 @@
 <%= render  "shared/mobile-navbar",
-  left: (link_to '', :back, class:"fas fa-chevron-left"),
-  right: '' %>
+  left: (link_to '', cameras_path, class:"fas fa-chevron-left"),
+  right: ((@camera.user == current_user) ? (link_to '', edit_camera_path(@camera), class:"fas fa-edit") : '') %>
 
-<%= link_to "Back", :back %>
-<%= link_to "Edit", edit_camera_path(@camera)%>
+<%# TODOOOOO EDIT THE BUTTONS  %>
+
+<div class="top-buttons">
+<%= link_to '', :back, class:"circle fas fa-chevron-left" %>
+<%= link_to '', edit_camera_path(@camera), class:"circle fas fa-edit" %>
+</div>
 
 <div class="show-page-photo-container">
 <% if @camera.photo.attached? %>

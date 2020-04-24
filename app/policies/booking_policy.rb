@@ -1,4 +1,4 @@
-class BookingsPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -10,5 +10,6 @@ class BookingsPolicy < ApplicationPolicy
   end
 
   def create?
+    true
   end
 end

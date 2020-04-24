@@ -30,12 +30,12 @@ class CamerasController < ApplicationController
 
   def edit
     @camera = Camera.find(params[:id])
-    # TODO
+    authorize @camera
   end
 
   def update
-    record.user == user
     @camera.update(camera_params) ? (redirect_to camera_path(@camera)) : (render :new)
+    authorize @camera
   end
 
   def delete
