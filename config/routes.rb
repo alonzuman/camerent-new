@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboard#main'
 
-  get '/users/:id', to: 'profiles#show'
+  get '/users/:id', to: 'profiles#show', as: 'profile'
 
 end

@@ -1,17 +1,21 @@
+<%= render  "shared/mobile-navbar", left: (link_to '', :back, class:"fas fa-chevron-left"), right: '' %>
+
 <div class="container">
   <div class="user-info">
     <% if @user.photo.attached? %>
-        <%= cl_image_tag(@user.photo.key, class:"medium-avatar") %>
+        <%= cl_image_tag(@user.photo.key, class:"big-avatar") %>
       <% else %>
-        <%= image_tag("default-avatar.png", class:"medium-avatar")%>
+        <%= image_tag("default-avatar.png", class:"big-avatar")%>
     <% end %>
-    <h4><%= @user.email %></h4>
+    <h1><%= @user.full_name %></h1>
+    <p><%= @user.bio %></p>
 
 
   </div>
 
 
-  <h2><%= @user.email %> cameras</h2>
+  <br>
+  <h2><%= @user.full_name.split(' ')[0] %>'s cameras</h2>
   <ul class="grid-container">
     <% @user.cameras.each do |camera| %>
       <%= link_to camera_path(camera) do %>
@@ -22,3 +26,4 @@
 </div>
 
 <!-- ink_to "View Profile", @user.profile -->
+<%= render  "shared/action-bar" %>
