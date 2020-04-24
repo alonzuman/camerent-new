@@ -3,25 +3,24 @@
 const mapToggleButton = document.querySelector('.toggle-map');
 const map = document.getElementById('map');
 const cardsGrid = document.querySelector('.results-wrapper');
-const mapContainer = document.querySelector('#map-container');
-
-
-console.log(cardsGrid)
 
 if (window.matchMedia("(max-width: 768px)").matches) {
-  // mapContainer.style.display = 'none';
-  map.style.display = 'none';
+  
+  map.style.opacity = '0';
+  map.style.zIndex = '-10';
 
   mapToggleButton.addEventListener('click', () => {
-    if (map.style.display == 'none') {
+    if (map.style.opacity == '0') {
       cardsGrid.style.display = 'none';
-      map.style.display = 'block';
+      map.style.opacity = '1';
       mapToggleButton.innerText = 'Close Map';
     } else {
-      map.style.display = 'none';
+      map.style.opacity = '0';
+      map.style.zIndex = '-10';
       cardsGrid.style.display = 'block';
       mapToggleButton.innerText = 'Open Map';
     }
   })
-} else {
 }
+
+window.innerWidth = 455

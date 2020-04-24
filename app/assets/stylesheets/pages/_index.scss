@@ -24,6 +24,9 @@
   display: none;
 }
 
+.mapboxgl-canvas-container {
+  height: 100vh;
+}
 
 @media screen and (max-width: 768px) {
   .grid-container {
@@ -61,6 +64,7 @@
     padding: 8px 16px;
     display: block;
     margin: 0 auto;
+    z-index: 99;
   }
   
   .toggle-map:hover {
