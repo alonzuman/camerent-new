@@ -1,13 +1,11 @@
 <%= render  "shared/mobile-navbar", left: '', right: '' %>
 
 <div class="results-container">
-  <%# <div id="map-container"> %>
     <div
       id="map"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     ></div>
-  <%# </div> %>
 
   <div class="results-wrapper">
     <h2 id="view-cameras">More than <%= (@cameras.size - 2) %> cameras around you</h2>

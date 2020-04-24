@@ -24,6 +24,13 @@
   display: none;
 }
 
+<<<<<<< Updated upstream
+.mapboxgl-canvas-container {
+  height: 100vh;
+}
+=======
+
+>>>>>>> Stashed changes
 
 @media screen and (max-width: 768px) {
   .grid-container {
@@ -45,11 +52,17 @@
   }
 
   #map {
+<<<<<<< Updated upstream
     top: 0;
     bottom: 0;
     position: absolute;
     width: 100%;
     height: 100%;
+=======
+    position: fixed;
+    right: 0;
+    width: 0%;
+>>>>>>> Stashed changes
   }
 
   .toggle-map {
@@ -61,6 +74,7 @@
     padding: 8px 16px;
     display: block;
     margin: 0 auto;
+    z-index: 99;
   }
   
   .toggle-map:hover {
